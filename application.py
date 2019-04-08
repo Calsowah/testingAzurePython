@@ -3,4 +3,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello CS5412!"
+    return "Hey!"
+
+# @app.route("/")
+# def home():
+#     return render_template("home.html")
