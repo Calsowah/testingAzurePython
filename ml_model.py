@@ -155,9 +155,8 @@ print("Accuracy: {:.2f}%".format(np.mean(p == class_test_flat_list)*100))
 
 # TO DO NEXT
 # Automate the path determination process
-# Write the intermediate report
 # Debug the third last part to clean it up
 # Parse the questionnaires filled in and use that for prediction/matching
 # Reduce the dimensionality of the data as not all the features are important - This would make the model
 # efficient, faster, more accurate and cleaner. More relevant to fit it in the start-up context
-#
+# Validate/regular expressions for the Google Form for consistency
