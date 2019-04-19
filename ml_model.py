@@ -4,11 +4,11 @@ import numpy as np
 import math
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.cross_validation import ShuffleSplit
+from sklearn.model_selection import ShuffleSplit
 from collections import Counter, defaultdict
 
 #
-data = '/Users/bryankamau/Documents/SPRING 2019/CS5412/testingAzurePython/data/'
+data = 'data/'
 data_file = data + "data job posts.csv"
 
 
@@ -78,7 +78,7 @@ all_quals = uniq_words(jobs_df_2, 13)
 
 # all necessary features
 # concat the job des, locations, quals
-all_features = all_unique_words + all_locs + all_quals
+all_features = all_unique_words[:1000] #+ all_locs + all_quals
 
 
 # remove all words with less than 3 letters
