@@ -4,7 +4,7 @@ import numpy as np
 import math
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.cross_validation import ShuffleSplit
+from sklearn.model_selection import ShuffleSplit
 from collections import Counter, defaultdict
 
 #
@@ -78,7 +78,7 @@ all_quals = uniq_words(jobs_df_2, 13)
 
 # all necessary features
 # concat the job des, locations, quals
-all_features = all_unique_words + all_locs + all_quals
+all_features = all_unique_words[:1000] #+ all_locs + all_quals
 
 
 # remove all words with less than 3 letters
@@ -156,9 +156,8 @@ print("Accuracy: {:.2f}%".format(np.mean(p == class_test_flat_list)*100))
 
 # TO DO NEXT
 # Automate the path determination process
-# Write the intermediate report
 # Debug the third last part to clean it up
 # Parse the questionnaires filled in and use that for prediction/matching
 # Reduce the dimensionality of the data as not all the features are important - This would make the model
 # efficient, faster, more accurate and cleaner. More relevant to fit it in the start-up context
-#
+# Validate/regular expressions for the Google Form for consistency
