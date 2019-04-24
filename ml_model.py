@@ -8,7 +8,7 @@ from sklearn.cross_validation import ShuffleSplit
 from collections import Counter, defaultdict
 
 #
-data = '/Users/bryankamau/Documents/SPRING 2019/CS5412/testingAzurePython/data/'
+data = '/Users/bryankamau/Documents/SPRING 2019/CS 5412/testingAzurePython/data/'
 data_file = data + "data job posts.csv"
 
 
@@ -125,6 +125,7 @@ for idx, wrd in enumerate(relevant_unique_words):
 for i in range(r):
     tokens = all_words(jobs_df_2, i, 11)+all_words(jobs_df_2,
                                                    i, 10)+all_words(jobs_df_2, i, 13)
+
     counts = Counter(tokens)
     for key, val in counts.items():
         if key in all_features:
